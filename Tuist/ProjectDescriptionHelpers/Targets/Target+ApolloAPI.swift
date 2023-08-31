@@ -2,8 +2,8 @@ import ProjectDescription
 
 extension Target {
     
-    public static func apolloTarget() -> Target {
-        let target = ApolloTarget.apollo
+    public static func apolloAPITarget() -> Target {
+        let target = ApolloTarget.apolloAPI
         
         return Target(
             name: target.name,
@@ -14,9 +14,6 @@ extension Target {
             infoPlist: .file(path: "Sources/\(target.name)/Info.plist"),
             sources: [
                 "apollo-ios/Sources/\(target.name)/**"
-            ],
-            dependencies: [
-                .target(name: ApolloTarget.apolloAPI.name)
             ],
             settings: .forTarget(target)
         )

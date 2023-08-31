@@ -2,8 +2,8 @@ import ProjectDescription
 
 extension Target {
     
-    public static func apolloTarget() -> Target {
-        let target = ApolloTarget.apollo
+    public static func apolloSQLiteTarget() -> Target {
+        let target = ApolloTarget.apolloSQLite
         
         return Target(
             name: target.name,
@@ -16,7 +16,8 @@ extension Target {
                 "apollo-ios/Sources/\(target.name)/**"
             ],
             dependencies: [
-                .target(name: ApolloTarget.apolloAPI.name)
+                .target(name: ApolloTarget.apollo.name),
+                .package(product: "SQLite")
             ],
             settings: .forTarget(target)
         )

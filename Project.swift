@@ -17,6 +17,9 @@ let project = Project(
         .release(name: .release, xcconfig: "Configuration/Apollo/Apollo-Project-Release.xcconfig")
     ]),
     targets: [
-        .apolloTarget()
+        .apolloTarget(),
+        .apolloAPITarget(),
+        .apolloSQLiteTarget(),
+        .apolloWebSocketTarget()
     ]
 )

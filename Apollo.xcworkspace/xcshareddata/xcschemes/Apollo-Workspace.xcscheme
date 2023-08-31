@@ -20,6 +20,48 @@
                ReferencedContainer = "container:Apollo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BA226FB817B06B244127B40E"
+               BuildableName = "ApolloAPI.framework"
+               BlueprintName = "ApolloAPI"
+               ReferencedContainer = "container:Apollo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1DD7C7CE5D0DE530BD76D259"
+               BuildableName = "ApolloSQLite.framework"
+               BlueprintName = "ApolloSQLite"
+               ReferencedContainer = "container:Apollo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5B7DAB0DB0FC7ADB3791C43D"
+               BuildableName = "ApolloWebSocket.framework"
+               BlueprintName = "ApolloWebSocket"
+               ReferencedContainer = "container:Apollo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

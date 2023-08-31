@@ -2,8 +2,8 @@ import ProjectDescription
 
 extension Target {
     
-    public static func apolloTarget() -> Target {
-        let target = ApolloTarget.apollo
+    public static func apolloWebSocketTarget() -> Target {
+        let target = ApolloTarget.apolloWebSocket
         
         return Target(
             name: target.name,
@@ -16,7 +16,7 @@ extension Target {
                 "apollo-ios/Sources/\(target.name)/**"
             ],
             dependencies: [
-                .target(name: ApolloTarget.apolloAPI.name)
+                .target(name: ApolloTarget.apollo.name)
             ],
             settings: .forTarget(target)
         )
