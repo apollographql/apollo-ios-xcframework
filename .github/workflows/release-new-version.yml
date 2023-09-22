@@ -1,0 +1,33 @@
+name: "Release New Version"
+
+on:
+  workflow_dispatch:
+    inputs:
+      remoteRef:
+        description: 'Branch or Tag to Pull'
+        required: true
+
+jobs:
+  create-release:
+    runs-on: macos-13
+    name: Create Release
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+      with:
+        ref: main
+    - name: Update Subtree
+      shell: bash
+      run: |
+        git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ remoteRef }} -m "Pulling '${{ remoteRef }}' from apollo-ios for release."
+    - name: Run Tuist Generation
+      uses: tuist/tuist-action@0.13.0
+      with:
+        command: 'generate'
+        arguments: '--no-open'
+    - name: Commit and Push Changes
+      shell: bash
+      run: |
+        git add -A
+        git commit -m "Releasing new version based on '${{ remoteRef }}' of apollo-ios repo."
+        git push
