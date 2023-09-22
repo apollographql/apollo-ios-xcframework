@@ -6,7 +6,7 @@
 
 ### Apollo iOS XCFramework
 
-This repo contains and Xcode environment to allow the building of `.xcframework`'s for the targets that are distributed as part of the [apollo-ios](https://github.com/apollographql/apollo-ios) Swift Package. There is a `make` file containing commands to build either all target frameworks, or specific ones, the following targets are supported:
+This repo contains an Xcode environment to allow the building of `.xcframework`'s for the targets that are distributed as part of the [apollo-ios](https://github.com/apollographql/apollo-ios) Swift Package. There is a `make` file containing commands to build either all target frameworks, or specific ones, the following targets are supported:
 
 - Apollo
 - ApolloAPI
