@@ -24,7 +24,7 @@ jobs:
     - name: Update Subtree
       shell: bash
       run: |
-        git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ github.event.inputs.remoteRef }} -m "Pulling '${{ github.event.inputs.remoteRef }}' from apollo-ios for release." --allow-unrelated-histories
+        git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ github.event.inputs.remoteRef }} -m "Pulling '${{ github.event.inputs.remoteRef }}' from apollo-ios for release." --squash
     - name: Run Tuist Generation
       uses: tuist/tuist-action@0.13.0
       with:
