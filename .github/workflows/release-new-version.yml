@@ -16,6 +16,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         ref: main
+        fetch-depth: 0
     - name: Setup SSH Keys
       uses: webfactory/ssh-agent@v0.7.0
       with:
@@ -24,7 +25,7 @@ jobs:
     - name: Update Subtree
       shell: bash
       run: |
-        git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ github.event.inputs.remoteRef }} -m "Pulling '${{ github.event.inputs.remoteRef }}' from apollo-ios for release." --squash
+        git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ github.event.inputs.remoteRef }} -m "Pulling '${{ github.event.inputs.remoteRef }}' from apollo-ios for release."
     - name: Run Tuist Generation
       uses: tuist/tuist-action@0.13.0
       with:
