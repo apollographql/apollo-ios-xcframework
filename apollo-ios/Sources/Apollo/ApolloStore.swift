@@ -228,6 +228,7 @@ public class ApolloStore {
       accumulator: Accumulator
     ) throws -> Accumulator.FinalResult {
       let object = try loadObject(forKey: key).get()
+
       return try executor.execute(
         selectionSet: type,
         on: object,
@@ -277,7 +278,6 @@ public class ApolloStore {
         withKey: key,
         variables: variables,
         accumulator: GraphQLSelectionSetMapper<SelectionSet>(
-          stripNullValues: false,
           handleMissingValues: .allowForOptionalFields
         )
       )

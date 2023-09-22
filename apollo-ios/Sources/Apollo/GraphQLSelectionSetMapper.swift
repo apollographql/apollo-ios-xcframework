@@ -2,14 +2,11 @@
 import ApolloAPI
 #endif
 
-import Foundation
-
 /// An accumulator that converts executed data to the correct values to create a `SelectionSet`.
 final class GraphQLSelectionSetMapper<T: SelectionSet>: GraphQLResultAccumulator {
 
   let requiresCacheKeyComputation: Bool = false
 
-  let stripNullValues: Bool
   let handleMissingValues: HandleMissingValues
 
   enum HandleMissingValues {
@@ -21,10 +18,8 @@ final class GraphQLSelectionSetMapper<T: SelectionSet>: GraphQLResultAccumulator
   }
 
   init(
-    stripNullValues: Bool = true,
     handleMissingValues: HandleMissingValues = .disallow
   ) {
-    self.stripNullValues = stripNullValues
     self.handleMissingValues = handleMissingValues
   }
 
@@ -50,7 +45,7 @@ final class GraphQLSelectionSetMapper<T: SelectionSet>: GraphQLResultAccumulator
   }
 
   func acceptNullValue(info: FieldExecutionInfo) -> AnyHashable? {
-    return stripNullValues ? nil : Optional<AnyHashable>.none
+    return DataDict.NullValue
   }
 
   func acceptMissingValue(info: FieldExecutionInfo) throws -> AnyHashable? {
@@ -90,4 +85,12 @@ final class GraphQLSelectionSetMapper<T: SelectionSet>: GraphQLResultAccumulator
   func finish(rootValue: DataDict, info: ObjectExecutionInfo) -> T {
     return T.init(_dataDict: rootValue)
   }
+}
+
+// MARK: - Null Value Definition
+extension DataDict {
+  /// A common value used to represent a null value in a `DataDict`.
+  ///
+  /// This value can be cast to `NSNull` and will bridge automatically.
+  static let NullValue = AnyHashable(Optional<AnyHashable>.none)
 }

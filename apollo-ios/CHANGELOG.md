@@ -1,5 +1,51 @@
 # Change Log
 
+## v1.5.0
+
+### New
+
+- **Added the ability pass a custom `RequestContext` to networking APIs ([#3198](https://github.com/apollographql/apollo-ios/pull/3198)):** _Thank you to [@danieltiger](https://github.com/danieltiger) for the contribution._
+  - **Minor Breaking Change:** The `requestContext` parameter is optional with a default value of `nil`. This means there are no breaking changes to the APIs for making networking calls. However, the `requestContext` parameter was also added to the `ApolloClientProtocol`. For custom implementations of this protocol (usually used for unit testing), you will need to add the `requestContext` parameter to your function signatures.
+  
+### Fixed
+
+- **Null values are no longer stripped from the underlying data used by generated `SelectionSet` models ([apollo-ios-dev/#25](https://github.com/apollographql/apollo-ios-dev/pull/25)):**
+  - When these models were manually inserted into the cache, the null fields, which were stripped, were not written to the cache. This caused unintended cache misses when fetching those values back out of the cache.
+  - This fixes [#3092](https://github.com/apollographql/apollo-ios/issues/3092). _Thank you to [@
+aleksanderlorenc-lw](https://github.com/aleksanderlorenc-lw) for raising this issue._ 
+
+## v1.4.0
+
+### New
+
+- **Added the ability to set a casing strategy for field names in code generation ([#2738](https://github.com/apollographql/apollo-ios/issues/2738)):** See PR ([#3171](https://github.com/apollographql/apollo-ios/pull/3171)). _Thank you to [@Spatel91111](https://github.com/Spatel91111) for the feature request._
+
+### Improvement
+
+- **Updated the way persisted queries are configured for code and manifest generation:** See PR ([#3175](https://github.com/apollographql/apollo-ios/pull/3175))
+- **Updated docs for `other` schema module type to provide more clarity ([#3164](https://github.com/apollographql/apollo-ios/issues/3164)):** See PR ([#3170](https://github.com/apollographql/apollo-ios/pull/3170)) _Thank you to [@Mordil](https://github.com/Mordil) for suggesting this update._
+
+## v1.3.3
+
+### Fixed
+- **Fix two issues with generated models:** See PR ([#3168](https://github.com/apollographql/apollo-ios/pull/3168)). _Thank you to [@iAmericanBoy](https://github.com/iAmericanBoy) for finding these issues and providing a reproduction case._
+- **Fix computation of operation identifiers for persisted queries:** See PR ([#3163](https://github.com/apollographql/apollo-ios/pull/3163)). _Thank you to [@WolframPRO](https://github.com/WolframPRO) for finding these issues._
+
+## v1.3.2
+
+### Improved
+- **Throw an error when an invalid key is present in the codegen configuration JSON ([#2942](https://github.com/apollographql/apollo-ios/issues/2942)):** See PR ([#3125](https://github.com/apollographql/apollo-ios/pull/3125)) _Thank you to [@Iron-Ham](https://github.com/Iron-Ham) for the contribution._
+- **Cleanup unused imports and declarations. ([#3099](https://github.com/apollographql/apollo-ios/issues/3099)):** See PR ([#3100](https://github.com/apollographql/apollo-ios/pull/3100)) _Thank you to [@Iron-Ham](https://github.com/Iron-Ham) for raising the issue and contributing the fix._
+- **Improvement to response code error API ([#2426](https://github.com/apollographql/apollo-ios/issues/2426)):** See PR ([#3123](https://github.com/apollographql/apollo-ios/pull/3123)). _Thank you to [@dfperry5](https://github.com/dfperry5) for the contribution._
+- **Improved file path support for operation manifest generation:** See PR ([#3128](https://github.com/apollographql/apollo-ios/pull/3128))
+
+### Fixed
+- **Fix two issues in test mock generation:** See PR ([#3120](https://github.com/apollographql/apollo-ios/pull/3120)). _Thank you to [@TizianoCoroneo](https://github.com/TizianoCoroneo) for finding this issue and contributing the fix._
+- **Fixed precondition failure when surpassing graphql-js max error count ([#3126](https://github.com/apollographql/apollo-ios/issues/3126)):** See PR ([#3132](https://github.com/apollographql/apollo-ios/pull/3132)).
+
+### Deprecated
+- **Deprecated `queryStringLiteralFormat` in `ApolloCodegenConfiguration`:** Query string literals will now always be generated as single line strings. See PR ([#3129](https://github.com/apollographql/apollo-ios/pull/3129)).
+
 ## v1.3.1
 
 ### Fixed
