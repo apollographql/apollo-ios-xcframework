@@ -38,3 +38,5 @@ jobs:
         git add -A
         git commit -m "Releasing new version based on '${{ github.event.inputs.remoteRef }}' of apollo-ios repo."
         git push
+        git tag ${{ github.event.inputs.remoteRef }}
+        git push --tags
