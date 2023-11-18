@@ -1,4 +1,7 @@
 <p align="center">
+  <img src="https://user-images.githubusercontent.com/146856/124335690-fc7ecd80-db4f-11eb-93fa-dcf4469bb07b.png" alt="Apollo GraphQL"/>
+</p>
+<p align="center">
   <a href="https://raw.githubusercontent.com/apollographql/apollo-ios/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?maxAge=2592000" alt="MIT license">
   </a>
