@@ -7,7 +7,7 @@ let project = Project(
     name: "Apollo",
     organizationName: "apollographql",
     options: .options(
-        automaticSchemesOptions: .enabled()
+        automaticSchemesOptions: .disabled
     ),
     packages: [
         .local(path: "./apollo-ios")

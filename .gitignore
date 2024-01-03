@@ -13,7 +13,7 @@ apollo-ios-cli
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+*xcuserdata/
 *.xcuserstate
 
 # Xcode project and workspace files
