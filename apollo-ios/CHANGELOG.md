@@ -1,10 +1,21 @@
 # Change Log
 
+## v1.8.0
+
+### Fixed
+- **Duplicate `@defer` directive error ([#235](https://github.com/apollographql/apollo-ios-dev/pull/235)):** When executing codegen against Apollo Router and a schema that supports the `@defer` directive it would fail with an error stating the directive is duplicated.
+
+### Improvement
+
+- **Added `InputObject`` casing strategy ([#137](https://github.com/apollographql/apollo-ios-dev/pull/137)):** We've added a new casing strategy option for InputObjects which mimics the behaviour of the enum case conversion strategy. _Thank you to [@alexifrim](https://github.com/alexifrim) for raising this in issue [#3257](https://github.com/apollographql/apollo-ios/issues/3257)._
+- **Added `GraphQLResult` conversion extension ([#139](https://github.com/apollographql/apollo-ios-dev/pull/139)):** `GraphQLResult` response data can now be easily converted into a JSON dictionary. This is useful for taking server response data and serializing it into a JSON dictionary which can then be used in a test suite.
+- **Codegen performance improvements ([#152](https://github.com/apollographql/apollo-ios-dev/pull/152)):** There has been a bunch of refactoring work to prepare for future codegen features but we've also managed to squeeze out some performance improvements.
+
 ## v1.7.1
 
 ### Fixed
 
-- **Fixed inconsistent ordering of fragments in generated operation definitions  ([#130](https://github.com/apollographql/apollo-ios-dev/pull/130)):** In order to make the ordering of fragments consistent, they are not alphabetized. This is a change to the data that gets sent over the wire when making a network request for an operation with fragments. **[Persisted Queries](https://www.apollographql.com/docs/ios/fetching/persisted-queries) users should re-register their queries when upgrading to this version.** _Thank you to [@scottasoutherland](https://github.com/scottasoutherland) for reporting the issue._
+- **Fixed inconsistent ordering of fragments in generated operation definitions  ([#130](https://github.com/apollographql/apollo-ios-dev/pull/130)):** In order to make the ordering of fragments consistent, they are now alphabetized. This is a change to the data that gets sent over the wire when making a network request for an operation with fragments. **[Persisted Queries](https://www.apollographql.com/docs/ios/fetching/persisted-queries) users should re-register their queries when upgrading to this version.** _Thank you to [@scottasoutherland](https://github.com/scottasoutherland) for reporting the issue._
 
 ### Improvement
 
