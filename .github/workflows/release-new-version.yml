@@ -28,10 +28,7 @@ jobs:
       run: |
         git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ github.event.inputs.remoteRef }} -m "Pulling '${{ github.event.inputs.remoteRef }}' from apollo-ios for release."
     - name: Run Tuist Generation
-      uses: tuist/tuist-action@0.13.0
-      with:
-        command: 'generate'
-        arguments: '--no-open'
+      uses: ./.github/actions/run-tuist-generation
     - name: Commit and Push Changes
       shell: bash
       run: |
