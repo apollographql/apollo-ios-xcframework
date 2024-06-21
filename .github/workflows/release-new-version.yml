@@ -6,6 +6,11 @@ on:
       remoteRef:
         description: 'Branch or Tag to Pull'
         required: true
+  repository_dispatch:
+    types: [release-new-version]
+
+env:
+  REMOTE_REF: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.remoteRef || github.event.client_payload.versionNumber }}
 
 jobs:
   create-release:
@@ -26,14 +31,14 @@ jobs:
     - name: Update Subtree
       shell: bash
       run: |
-        git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ github.event.inputs.remoteRef }} -m "Pulling '${{ github.event.inputs.remoteRef }}' from apollo-ios for release."
+        git subtree pull -P apollo-ios git@github.com:apollographql/apollo-ios.git ${{ env.REMOTE_REF }} -m "Pulling '${{ env.REMOTE_REF }}' from apollo-ios for release."
     - name: Run Tuist Generation
       uses: ./.github/actions/run-tuist-generation
     - name: Commit and Push Changes
       shell: bash
       run: |
         git add -A
-        git commit --allow-empty -m "Releasing new version based on '${{ github.event.inputs.remoteRef }}' of apollo-ios repo."
+        git commit --allow-empty -m "Releasing new version based on '${{ env.REMOTE_REF }}' of apollo-ios repo."
         git push
-        git tag ${{ github.event.inputs.remoteRef }}
+        git tag ${{ env.REMOTE_REF }}
         git push --tags
