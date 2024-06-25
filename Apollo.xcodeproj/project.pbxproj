@@ -113,6 +113,7 @@
 		E2790DD6ECFEB3A4567B80D2 /* JSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C96AE8C6E0D8E8EF91AC /* JSONRequest.swift */; };
 		E29AA6D893AB5A87DEDA36EF /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33A4289AA70C02BCA8FE9D /* Object.swift */; };
 		E825602D83F7B725C0C558BB /* MaxRetryInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C57B8D5C33EF167A4FC22 /* MaxRetryInterceptor.swift */; };
+		EBA3F57C0B3F1AB0FAB79E38 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637AB0C0E60EFD069374179 /* JSONConverter.swift */; };
 		EE752AB93F4DAB405894D85E /* SplitNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCAC8F9F604CFF894237A3 /* SplitNetworkTransport.swift */; };
 		EF436E44952C87105A528063 /* CacheKeyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA11B625A2ED9B084ED47A17 /* CacheKeyInfo.swift */; };
 		F1930676967908D8AEFB77BD /* SelectionSet+DictionaryIntializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ED54FA6AF796AF7524E9F3 /* SelectionSet+DictionaryIntializer.swift */; };
@@ -236,6 +237,7 @@
 		5E9BFD9A2ADF53ED2DCA23AB /* DispatchQueue+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Optional.swift"; sourceTree = "<group>"; };
 		5F3F4842E614E2771AC6BCA2 /* CacheWriteInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheWriteInterceptor.swift; sourceTree = "<group>"; };
 		610BB7C2C72372BDD0D2A960 /* PossiblyDeferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossiblyDeferred.swift; sourceTree = "<group>"; };
+		6637AB0C0E60EFD069374179 /* JSONConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
 		6692FD18EF1000042349CE35 /* ApolloStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloStore.swift; sourceTree = "<group>"; };
 		679711D463606BA08B4A15FC /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
 		6B21EBD28444772963492736 /* GraphQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLError.swift; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 				438843FFC73A76E0B9B96C4F /* InputValue+Evaluation.swift */,
 				16E783966C725632BB41BBA1 /* InterceptorProvider.swift */,
 				8334A05EDC14F6F8694D911B /* InterceptorRequestChain.swift */,
+				6637AB0C0E60EFD069374179 /* JSONConverter.swift */,
 				9B77C96AE8C6E0D8E8EF91AC /* JSONRequest.swift */,
 				928F11B625C6CDF256C79905 /* JSONResponseParsingInterceptor.swift */,
 				497C343D5F415625DDAAEC3F /* JSONSerialization+Sorting.swift */,
@@ -883,6 +886,7 @@
 				79D18D0F3BB905272CF934AC /* InputValue+Evaluation.swift in Sources */,
 				19B406B6E2A6E0C8A8495DCB /* InterceptorProvider.swift in Sources */,
 				40B249FD99A641E765EC5529 /* InterceptorRequestChain.swift in Sources */,
+				EBA3F57C0B3F1AB0FAB79E38 /* JSONConverter.swift in Sources */,
 				E2790DD6ECFEB3A4567B80D2 /* JSONRequest.swift in Sources */,
 				090FD1B4C4EA90ABED20D211 /* JSONResponseParsingInterceptor.swift in Sources */,
 				901DF2E2A4B00E22F3D88501 /* JSONSerialization+Sorting.swift in Sources */,
