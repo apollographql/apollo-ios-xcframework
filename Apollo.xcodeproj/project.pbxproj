@@ -52,6 +52,7 @@
 		493D25E87ACAAAB8CD0AED42 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D2957CE4C41DE58F34DC9 /* MultipartFormData.swift */; };
 		496E317414BD63DB74354A1F /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C386565CB35F3F0E4E66D5 /* Dictionary+Helpers.swift */; };
 		4D5E2D2CBBB4FCB922E9B7EE /* WebSocketStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA983A90BFCB9996C8F4BFA /* WebSocketStream.swift */; };
+		503F792B023722665D464377 /* JournalMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EBE362C8837200851AF57 /* JournalMode.swift */; };
 		51534417C4695EE49163F584 /* SSLClientCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366A2A4F9931FF9C2FC397F /* SSLClientCertificate.swift */; };
 		5222358FD5DB53E68CF63F7C /* NetworkFetchInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04878A715D382BA265A195D5 /* NetworkFetchInterceptor.swift */; };
 		575142CC2D463D58D0FD1693 /* Deferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0092C310435E9A74B0537A5 /* Deferred.swift */; };
@@ -248,6 +249,7 @@
 		610BB7C2C72372BDD0D2A960 /* PossiblyDeferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossiblyDeferred.swift; sourceTree = "<group>"; };
 		6637AB0C0E60EFD069374179 /* JSONConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
 		6692FD18EF1000042349CE35 /* ApolloStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloStore.swift; sourceTree = "<group>"; };
+		675EBE362C8837200851AF57 /* JournalMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalMode.swift; sourceTree = "<group>"; };
 		679711D463606BA08B4A15FC /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
 		6B21EBD28444772963492736 /* GraphQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLError.swift; sourceTree = "<group>"; };
 		6F1D3C1F6EF713BD8B86F746 /* Union.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Union.swift; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				F267A61872BE692AB5C407CD /* Documentation.docc */,
+				675EBE362C8837200851AF57 /* JournalMode.swift */,
 				B8399BAA53F13D8C7D987B76 /* SQLiteDatabase.swift */,
 				71855DC0F8DE056E7209856A /* SQLiteDotSwiftDatabase.swift */,
 				713BB90B07BD5FF6520F62F3 /* SQLiteNormalizedCache.swift */,
@@ -969,6 +972,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D78F3A49F8C2B4ABA14902BA /* Documentation.docc in Sources */,
+				503F792B023722665D464377 /* JournalMode.swift in Sources */,
 				2E43C7BEF89431468C2B30C1 /* SQLiteDatabase.swift in Sources */,
 				F8705F06FED403E8B4FB1874 /* SQLiteDotSwiftDatabase.swift in Sources */,
 				0F9FFAD66A2C308DA510A3E8 /* SQLiteNormalizedCache.swift in Sources */,
