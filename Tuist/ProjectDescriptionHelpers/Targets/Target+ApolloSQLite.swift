@@ -9,7 +9,7 @@ extension Target {
             name: target.name,
             platform: .iOS,
             product: .framework,
-            bundleId: "com.apollographql.apollosqlite",
+            bundleId: "com.apollographql.client.ios.sqlite",
             deploymentTarget: target.deploymentTarget,
             infoPlist: .file(path: "Sources/\(target.name)/Info.plist"),
             sources: [
