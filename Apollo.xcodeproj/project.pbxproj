@@ -1022,7 +1022,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apollo;
 				PRODUCT_NAME = Apollo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1056,7 +1056,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apollowebsocket;
 				PRODUCT_NAME = ApolloWebSocket;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1091,7 +1091,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apollosqlite;
 				PRODUCT_NAME = ApolloSQLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1179,7 +1179,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apollo;
 				PRODUCT_NAME = Apollo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1214,7 +1214,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apollowebsocket;
 				PRODUCT_NAME = ApolloWebSocket;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1248,7 +1248,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apollosqlite;
 				PRODUCT_NAME = ApolloSQLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1343,7 +1343,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apolloapi;
 				PRODUCT_NAME = ApolloAPI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1378,7 +1378,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.apolloapi;
 				PRODUCT_NAME = ApolloAPI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
