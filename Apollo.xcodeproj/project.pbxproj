@@ -1056,7 +1056,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.websocket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.apollowebsocket;
 				PRODUCT_NAME = ApolloWebSocket;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1091,7 +1091,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.sqlite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.apollosqlite;
 				PRODUCT_NAME = ApolloSQLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1214,7 +1214,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.websocket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.apollowebsocket;
 				PRODUCT_NAME = ApolloWebSocket;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1248,7 +1248,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.sqlite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.apollosqlite;
 				PRODUCT_NAME = ApolloSQLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1343,7 +1343,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.api;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.apolloapi;
 				PRODUCT_NAME = ApolloAPI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1378,7 +1378,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.api;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apollographql.client.ios.apolloapi;
 				PRODUCT_NAME = ApolloAPI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
