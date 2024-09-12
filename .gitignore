@@ -16,10 +16,6 @@ apollo-ios-cli
 *xcuserdata/
 *.xcuserstate
 
-# Xcode project and workspace files
-*.xcodeproj
-*.xcworkspace
-
 ## Other
 *.moved-aside
 *.xccheckout
