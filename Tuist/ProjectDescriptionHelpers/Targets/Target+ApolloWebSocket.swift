@@ -23,3 +23,21 @@ extension Target {
     }
     
 }
+
+extension Scheme {
+  
+  public static func apolloWebSocketScheme() -> Scheme {
+    let target: ApolloTarget = .apolloWebSocket
+    
+    return Scheme(
+      name: "\(target.name)-xcframework",
+      buildAction: .buildAction(targets: [
+        TargetReference(
+          projectPath: nil,
+          target: target.name
+        )
+      ])
+    )
+  }
+  
+}

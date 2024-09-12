@@ -6,6 +6,9 @@ import ProjectDescriptionHelpers
 let project = Project(
     name: "Apollo",
     organizationName: "apollographql",
+    options: .options(
+        automaticSchemesOptions: .disabled
+    ),
     packages: [
         .local(path: "./apollo-ios")
     ],
@@ -18,5 +21,11 @@ let project = Project(
         .apolloAPITarget(),
         .apolloSQLiteTarget(),
         .apolloWebSocketTarget()
+    ],
+    schemes: [
+      .apolloScheme(),
+      .apolloAPIScheme(),
+      .apolloSQLiteScheme(),
+      .apolloWebSocketScheme()
     ]
 )
