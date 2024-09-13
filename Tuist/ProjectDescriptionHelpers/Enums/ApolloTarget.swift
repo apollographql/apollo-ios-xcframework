@@ -5,6 +5,7 @@ public enum ApolloTarget {
     case apollo
     case apolloAPI
     case apolloSQLite
+    case apolloTestSupport
     case apolloWebSocket
     
     public var name: String {
@@ -15,6 +16,8 @@ public enum ApolloTarget {
             return "ApolloAPI"
         case .apolloSQLite:
             return "ApolloSQLite"
+        case .apolloTestSupport:
+          return "ApolloTestSupport"
         case .apolloWebSocket:
             return "ApolloWebSocket"
         }
@@ -28,6 +31,8 @@ public enum ApolloTarget {
             return "Apollo-Target-ApolloAPI"
         case .apolloSQLite:
             return "ApolloSQLite-Target-Framework"
+        case .apolloTestSupport:
+            return "Apollo-Target-TestSupport"
         case .apolloWebSocket:
             return "ApolloWebSocket-Target-Framework"
         }
@@ -38,6 +43,7 @@ public enum ApolloTarget {
         case .apollo,
              .apolloAPI,
              .apolloSQLite,
+             .apolloTestSupport,
              .apolloWebSocket:
             return .iOS(targetVersion: "13.0", devices: [.iphone, .ipad])
         }

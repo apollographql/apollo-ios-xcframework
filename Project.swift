@@ -20,12 +20,14 @@ let project = Project(
         .apolloTarget(),
         .apolloAPITarget(),
         .apolloSQLiteTarget(),
+        .apolloTestSupportTarget(),
         .apolloWebSocketTarget()
     ],
     schemes: [
       .apolloScheme(),
       .apolloAPIScheme(),
       .apolloSQLiteScheme(),
+      .apolloTestSupportScheme(),
       .apolloWebSocketScheme()
     ]
 )
