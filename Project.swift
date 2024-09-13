@@ -21,5 +21,11 @@ let project = Project(
         .apolloAPITarget(),
         .apolloSQLiteTarget(),
         .apolloWebSocketTarget()
+    ],
+    schemes: [
+      .apolloScheme(),
+      .apolloAPIScheme(),
+      .apolloSQLiteScheme(),
+      .apolloWebSocketScheme()
     ]
 )

@@ -24,3 +24,21 @@ extension Target {
     }
     
 }
+
+extension Scheme {
+  
+  public static func apolloSQLiteScheme() -> Scheme {
+    let target: ApolloTarget = .apolloSQLite
+    
+    return Scheme(
+      name: "\(target.name)-xcframework",
+      buildAction: .buildAction(targets: [
+        TargetReference(
+          projectPath: nil,
+          target: target.name
+        )
+      ])
+    )
+  }
+  
+}

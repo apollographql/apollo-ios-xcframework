@@ -20,3 +20,21 @@ extension Target {
     }
     
 }
+
+extension Scheme {
+  
+  public static func apolloAPIScheme() -> Scheme {
+    let target: ApolloTarget = .apolloAPI
+    
+    return Scheme(
+      name: "\(target.name)-xcframework",
+      buildAction: .buildAction(targets: [
+        TargetReference(
+          projectPath: nil,
+          target: target.name
+        )
+      ])
+    )
+  }
+  
+}
