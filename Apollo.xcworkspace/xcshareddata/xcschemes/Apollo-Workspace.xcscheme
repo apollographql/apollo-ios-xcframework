@@ -56,6 +56,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FDD3BFD51141D6590C94308D"
+               BuildableName = "ApolloTestSupport.framework"
+               BlueprintName = "ApolloTestSupport"
+               ReferencedContainer = "container:Apollo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5B7DAB0DB0FC7ADB3791C43D"
                BuildableName = "ApolloWebSocket.framework"
                BlueprintName = "ApolloWebSocket"
