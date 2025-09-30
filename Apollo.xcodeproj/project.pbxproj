@@ -50,6 +50,7 @@
 		40B249FD99A641E765EC5529 /* InterceptorRequestChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334A05EDC14F6F8694D911B /* InterceptorRequestChain.swift */; };
 		42D44603DB3B8C5288C1EC7B /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE411493C514E579F27568 /* GraphQLResult.swift */; };
 		42FA310FA84F4B1BBC5775FC /* FragmentProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3D24AD8BDC9C4F9DBE297 /* FragmentProtocols.swift */; };
+		441D5EDCC46EC73AAC54BD8D /* ResponsePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA862FF9CE66D4EAD08444C /* ResponsePath.swift */; };
 		474482C9198435F04F6D7195 /* GraphQLExecutionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6969D8414986724B545450 /* GraphQLExecutionSource.swift */; };
 		493D25E87ACAAAB8CD0AED42 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D2957CE4C41DE58F34DC9 /* MultipartFormData.swift */; };
 		496E317414BD63DB74354A1F /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C386565CB35F3F0E4E66D5 /* Dictionary+Helpers.swift */; };
@@ -75,6 +76,7 @@
 		6F3E340836020CE89A4D612C /* GraphQLHTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED9BECB9E5686F6E576E29 /* GraphQLHTTPRequestError.swift */; };
 		6F83EB30D359BE5E3D10918D /* MultipartResponseDeferParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BB3C960E43C9CFCEFB11E /* MultipartResponseDeferParser.swift */; };
 		7344F9B1A986F3653B357B40 /* MultipartResponseParsingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50E8F460B09F4A61DF269D /* MultipartResponseParsingInterceptor.swift */; };
+		73B13D2CCB2CDE5CA5273E1C /* FieldPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78850E10955CFF9EB1035009 /* FieldPolicy.swift */; };
 		73E4DD225CB610C619226917 /* TestMockSelectionSetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFE504B9C9451E20C2AA60 /* TestMockSelectionSetMapper.swift */; };
 		774EBDA3B393BA7974C70559 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4056601437516B5167090C /* ApolloClient.swift */; };
 		78829CA3C03F63DD30224B4D /* JSONDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A50AEAD2F860468E720A8D /* JSONDecodingError.swift */; };
@@ -113,7 +115,6 @@
 		C12531D8D9259B1DF3AC8859 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BB207B3DADB8B9D5E2EB1 /* Compression.swift */; };
 		C1748B08EE3765CC48CF5451 /* ScalarTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330DCED33363328748DA210 /* ScalarTypes.swift */; };
 		C4686A44817403D0116D466D /* NormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430660006E3EBDF85964E84D /* NormalizedCache.swift */; };
-		C6CD5CE97D54F89FE36331B5 /* ResponsePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166E16DDE85EA76F779E6E7 /* ResponsePath.swift */; };
 		C6CDF83555EDFF9A5319907E /* GraphQLHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00B50730CBBCC9BA88368 /* GraphQLHTTPMethod.swift */; };
 		CA557F062B96E57307BECA0E /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2719782A00FB5C039707CA4 /* Apollo.framework */; };
 		CCE575C77FD23CF2CE5A89F7 /* CacheReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = F969BF87F5CB95906FB4DCC4 /* CacheReference.swift */; };
@@ -122,6 +123,7 @@
 		D5F52DBD88DE732387169B35 /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8788117897C33EC74D6B25 /* GraphQLResponse.swift */; };
 		D78F3A49F8C2B4ABA14902BA /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = F267A61872BE692AB5C407CD /* Documentation.docc */; };
 		D898DF7ABB8D7033C26E5468 /* InMemoryNormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B3512978B2ADDBABF8623 /* InMemoryNormalizedCache.swift */; };
+		D9DF4403A05A62FAE34A1FC0 /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1396DB9D41703EC8673C5A /* InputData.swift */; };
 		DC11C8BD8EBF6DB72D75EEBF /* HTTPURLResponse+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D721FB4955DCA7AD8C8489B /* HTTPURLResponse+Helpers.swift */; };
 		E2790DD6ECFEB3A4567B80D2 /* JSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77C96AE8C6E0D8E8EF91AC /* JSONRequest.swift */; };
 		E29AA6D893AB5A87DEDA36EF /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33A4289AA70C02BCA8FE9D /* Object.swift */; };
@@ -135,6 +137,7 @@
 		F2F6457CCC4EFA30E9CFEFC3 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692FD18EF1000042349CE35 /* ApolloStore.swift */; };
 		F348287319F8A863A7527A10 /* RequestChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00B47039235BF350C19247 /* RequestChain.swift */; };
 		F39B69312CB905EC6ECE769D /* RequestBodyCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F0E99BB3BAF06170EEBFA /* RequestBodyCreator.swift */; };
+		F5ADA653309034533773017C /* FieldPolicyDirectiveEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05A96A6DED60B24F1C4F88 /* FieldPolicyDirectiveEvaluator.swift */; };
 		F65E7CC7F3DF5342E4FE7885 /* ApolloInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB069C36EAECD8E443623BDF /* ApolloInterceptor.swift */; };
 		F7BB984952CF9F8C8E46C1A3 /* GraphQLGETTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16569AEEE63257B3072C83B0 /* GraphQLGETTransformer.swift */; };
 		F8940A15B8FEDB2DD6C4FB44 /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B6ED99BAB5AC57026F846D /* RecordSet.swift */; };
@@ -246,10 +249,12 @@
 		16569AEEE63257B3072C83B0 /* GraphQLGETTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLGETTransformer.swift; sourceTree = "<group>"; };
 		16E783966C725632BB41BBA1 /* InterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorProvider.swift; sourceTree = "<group>"; };
 		1AFE411493C514E579F27568 /* GraphQLResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResult.swift; sourceTree = "<group>"; };
+		1B05A96A6DED60B24F1C4F88 /* FieldPolicyDirectiveEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldPolicyDirectiveEvaluator.swift; sourceTree = "<group>"; };
 		248AEB179F5573DC27147D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2AEBD34C503D2B21F1117F42 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		2B8CB0D35EA91826553B2983 /* AutomaticPersistedQueryInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticPersistedQueryInterceptor.swift; sourceTree = "<group>"; };
 		2C50E8F460B09F4A61DF269D /* MultipartResponseParsingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartResponseParsingInterceptor.swift; sourceTree = "<group>"; };
+		2E1396DB9D41703EC8673C5A /* InputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputData.swift; sourceTree = "<group>"; };
 		2F24DFC2C230A89E09B93DEC /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		35054DDB3733F3D1C0ACC06A /* PathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathComponent.swift; sourceTree = "<group>"; };
 		37C386565CB35F3F0E4E66D5 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
@@ -288,9 +293,9 @@
 		6B21EBD28444772963492736 /* GraphQLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLError.swift; sourceTree = "<group>"; };
 		6F1D3C1F6EF713BD8B86F746 /* Union.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Union.swift; sourceTree = "<group>"; };
 		713BB90B07BD5FF6520F62F3 /* SQLiteNormalizedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteNormalizedCache.swift; sourceTree = "<group>"; };
-		7166E16DDE85EA76F779E6E7 /* ResponsePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePath.swift; sourceTree = "<group>"; };
 		720604893C1507F94DA39932 /* ParentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentType.swift; sourceTree = "<group>"; };
 		7680F98A3755D34547D0AEAF /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		78850E10955CFF9EB1035009 /* FieldPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldPolicy.swift; sourceTree = "<group>"; };
 		7B9F1E9DED7F6D3834039479 /* ApolloClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClientProtocol.swift; sourceTree = "<group>"; };
 		7CD9E803288D8D8576EAF407 /* OperationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationMessage.swift; sourceTree = "<group>"; };
 		7D721FB4955DCA7AD8C8489B /* HTTPURLResponse+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Helpers.swift"; sourceTree = "<group>"; };
@@ -380,6 +385,7 @@
 		F9ED9BECB9E5686F6E576E29 /* GraphQLHTTPRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLHTTPRequestError.swift; sourceTree = "<group>"; };
 		FA4BFCC8544D742C3E1F250C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FB8CD5FC9C4AC60E2FECFB60 /* NetworkResponseExecutionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseExecutionSource.swift; sourceTree = "<group>"; };
+		FDA862FF9CE66D4EAD08444C /* ResponsePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePath.swift; sourceTree = "<group>"; };
 		FF00B47039235BF350C19247 /* RequestChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestChain.swift; sourceTree = "<group>"; };
 		FF0A3F90460E549B20B0DE92 /* EnumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumType.swift; sourceTree = "<group>"; };
 		FFD8EBD37B0908AFA54292FF /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
@@ -484,10 +490,12 @@
 				CE2240627BD95EB5CDD14D25 /* DataDict.swift */,
 				F0092C310435E9A74B0537A5 /* Deferred.swift */,
 				2F24DFC2C230A89E09B93DEC /* Documentation.docc */,
+				78850E10955CFF9EB1035009 /* FieldPolicy.swift */,
 				CAA3D24AD8BDC9C4F9DBE297 /* FragmentProtocols.swift */,
 				3C057651A6D901B01A7CE286 /* GraphQLEnum.swift */,
 				8469575AEC3F91ACEFC8AF0B /* GraphQLNullable.swift */,
 				44872F697BFFDF94BBC9A5A6 /* GraphQLOperation.swift */,
+				2E1396DB9D41703EC8673C5A /* InputData.swift */,
 				4E98A5448ADECBFDA59FC27C /* InputValue.swift */,
 				D7F466849FEE788F19A38E65 /* JSON.swift */,
 				42A50AEAD2F860468E720A8D /* JSONDecodingError.swift */,
@@ -496,6 +504,7 @@
 				D0CDED8FFC46123346876EA5 /* ObjectData.swift */,
 				F90EE6DEADEE9E6E512C1F0A /* OutputTypeConvertible.swift */,
 				720604893C1507F94DA39932 /* ParentType.swift */,
+				FDA862FF9CE66D4EAD08444C /* ResponsePath.swift */,
 				C330DCED33363328748DA210 /* ScalarTypes.swift */,
 				EE620BD7A83157CCEEBFC5B4 /* SchemaConfiguration.swift */,
 				F3A2BFAF44BAC2DB95A5059B /* SchemaMetadata.swift */,
@@ -668,6 +677,7 @@
 				37C386565CB35F3F0E4E66D5 /* Dictionary+Helpers.swift */,
 				5E9BFD9A2ADF53ED2DCA23AB /* DispatchQueue+Optional.swift */,
 				D72E0B0E4DDF3D147682EA29 /* Documentation.docc */,
+				1B05A96A6DED60B24F1C4F88 /* FieldPolicyDirectiveEvaluator.swift */,
 				D7A8D4E2085C023FC5938222 /* FieldSelectionCollector.swift */,
 				F448556B8A715C3A759FF67B /* GraphQLDependencyTracker.swift */,
 				6B21EBD28444772963492736 /* GraphQLError.swift */,
@@ -716,7 +726,6 @@
 				569F9FE4CB0B8B589939A10E /* RequestClientMetadata.swift */,
 				4FDE08D72E768B1198C94717 /* RequestContext.swift */,
 				BB091A7C8FB2F96AF31EA1A9 /* ResponseCodeInterceptor.swift */,
-				7166E16DDE85EA76F779E6E7 /* ResponsePath.swift */,
 				99ED54FA6AF796AF7524E9F3 /* SelectionSet+DictionaryIntializer.swift */,
 				8F8055019A045DEBF03CF28C /* SelectionSet+JSONInitializer.swift */,
 				075D83F15B466DD6121AA617 /* TaskData.swift */,
@@ -934,10 +943,12 @@
 				9EDF4A1D0A9E91A427AC198D /* DataDict.swift in Sources */,
 				575142CC2D463D58D0FD1693 /* Deferred.swift in Sources */,
 				57C9C9F9528FAE38225F6D61 /* Documentation.docc in Sources */,
+				73B13D2CCB2CDE5CA5273E1C /* FieldPolicy.swift in Sources */,
 				42FA310FA84F4B1BBC5775FC /* FragmentProtocols.swift in Sources */,
 				29557DC4C5D0228CB8BB3429 /* GraphQLEnum.swift in Sources */,
 				2F769F229DDE14619EBC4E72 /* GraphQLNullable.swift in Sources */,
 				B00C24C1F0FE1F60AAB9E806 /* GraphQLOperation.swift in Sources */,
+				D9DF4403A05A62FAE34A1FC0 /* InputData.swift in Sources */,
 				002622A202B5AE4012652B02 /* InputValue.swift in Sources */,
 				96F885B4E4B97F54AADD007D /* JSON.swift in Sources */,
 				78829CA3C03F63DD30224B4D /* JSONDecodingError.swift in Sources */,
@@ -946,6 +957,7 @@
 				6F196188CEF8C78239E7E864 /* ObjectData.swift in Sources */,
 				0F16148207316F9635594412 /* OutputTypeConvertible.swift in Sources */,
 				1CA504D65082061C3890AB5F /* ParentType.swift in Sources */,
+				441D5EDCC46EC73AAC54BD8D /* ResponsePath.swift in Sources */,
 				C1748B08EE3765CC48CF5451 /* ScalarTypes.swift in Sources */,
 				A5256D22D8996BDB5FB90A24 /* SchemaConfiguration.swift in Sources */,
 				6EDE7CE233037E56FC4C183B /* SchemaMetadata.swift in Sources */,
@@ -988,6 +1000,7 @@
 				D38D92FAD6F19B7AF4B91741 /* CacheDataExecutionSource.swift in Sources */,
 				38BFD7B86E68D4662B10A7CA /* NetworkResponseExecutionSource.swift in Sources */,
 				9A3B9DC5E2E37CDE5E9A0E85 /* SelectionSetModelExecutionSource.swift in Sources */,
+				F5ADA653309034533773017C /* FieldPolicyDirectiveEvaluator.swift in Sources */,
 				86AB16A726BC88A1232F9D25 /* FieldSelectionCollector.swift in Sources */,
 				167368CFEE45ED7E912275A2 /* GraphQLDependencyTracker.swift in Sources */,
 				A6E3DDAF0D769C86B32ABFA7 /* GraphQLError.swift in Sources */,
@@ -1036,7 +1049,6 @@
 				4E92832AA6B8ADE7BD8DBA1A /* RequestClientMetadata.swift in Sources */,
 				118191B153003E2A25E9267C /* RequestContext.swift in Sources */,
 				0915A36428F1BF7DC15C1CDD /* ResponseCodeInterceptor.swift in Sources */,
-				C6CD5CE97D54F89FE36331B5 /* ResponsePath.swift in Sources */,
 				F1930676967908D8AEFB77BD /* SelectionSet+DictionaryIntializer.swift in Sources */,
 				22265BAA15DA829613C3D912 /* SelectionSet+JSONInitializer.swift in Sources */,
 				6E887FAEBA8A1CE1761952D8 /* TaskData.swift in Sources */,
