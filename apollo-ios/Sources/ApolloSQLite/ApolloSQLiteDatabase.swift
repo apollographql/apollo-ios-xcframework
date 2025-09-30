@@ -39,8 +39,9 @@ public final class ApolloSQLiteDatabase: SQLiteDatabase {
 
   private func openConnection() throws {
     let flags = SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE | SQLITE_OPEN_FULLMUTEX | SQLITE_OPEN_URI
-    if sqlite3_open_v2(dbURL.path, &db, flags, nil) != SQLITE_OK {
-      throw SQLiteError.open(path: dbURL.path)
+    let result = sqlite3_open_v2(dbURL.path, &db, flags, nil)
+    if result != SQLITE_OK {
+      throw SQLiteError.open(path: dbURL.path, resultCode: result)
     }
   }
 
@@ -56,15 +57,16 @@ public final class ApolloSQLiteDatabase: SQLiteDatabase {
   private func exec(_ sql: String, errorMessage: @autoclosure () -> String) throws -> Int32 {
     let result = sqlite3_exec(db, sql, nil, nil, nil)
     if result != SQLITE_OK {
-      throw SQLiteError.execution(message: "\(errorMessage()): \(sqliteErrorMessage())")
+      throw SQLiteError.execution(message: "\(errorMessage()): \(sqliteErrorMessage())", resultCode: result)
     }
     return result
   }
 
   private func prepareStatement(_ sql: String, errorMessage: @autoclosure () -> String) throws -> OpaquePointer? {
     var stmt: OpaquePointer?
-    if sqlite3_prepare_v2(db, sql, -1, &stmt, nil) != SQLITE_OK {
-      throw SQLiteError.prepare(message: "\(errorMessage()): \(sqliteErrorMessage())")
+    let result = sqlite3_prepare_v2(db, sql, -1, &stmt, nil)
+    if result != SQLITE_OK {
+      throw SQLiteError.prepare(message: "\(errorMessage()): \(sqliteErrorMessage())", resultCode: result)
     }
     return stmt
   }
@@ -86,39 +88,49 @@ public final class ApolloSQLiteDatabase: SQLiteDatabase {
   }
 
   public func selectRawRows(forKeys keys: Set<CacheKey>) throws -> [DatabaseRow] {
-    guard !keys.isEmpty else { return [] }
+      guard !keys.isEmpty else { return [] }
 
-    return try performSync {
-      let placeholders = keys.map { _ in "?" }.joined(separator: ", ")
-      let sql = """
-      SELECT \(Self.keyColumnName), \(Self.recordColumName) FROM \(Self.tableName)
-      WHERE \(Self.keyColumnName) IN (\(placeholders))
-      """
+      let batchSize = 500
+      var allRows = [DatabaseRow]()
+      let keyBatches = keys.chunked(into: batchSize)
 
-      let stmt = try prepareStatement(sql, errorMessage: "Failed to prepare select statement")
-      defer { sqlite3_finalize(stmt) }
+      for batch in keyBatches {
+        let rows = try performSync {
+          let placeholders = batch.map { _ in "?" }.joined(separator: ", ")
+          let sql = """
+          SELECT \(Self.keyColumnName), \(Self.recordColumName)
+          FROM \(Self.tableName)
+          WHERE \(Self.keyColumnName) IN (\(placeholders))
+          """
 
-      for (index, key) in keys.enumerated() {
-        sqlite3_bind_text(stmt, Int32(index + 1), key, -1, SQLITE_TRANSIENT)
-      }
+          let stmt = try prepareStatement(sql, errorMessage: "Failed to prepare select statement")
+          defer { sqlite3_finalize(stmt) }
 
-      var rows = [DatabaseRow]()
-      var result: Int32
-      repeat {
-          result = sqlite3_step(stmt)
-          if result == SQLITE_ROW {
+          for (index, key) in batch.enumerated() {
+            sqlite3_bind_text(stmt, Int32(index + 1), key, -1, SQLITE_TRANSIENT)
+          }
+
+          var rows = [DatabaseRow]()
+          var result: Int32
+          repeat {
+            result = sqlite3_step(stmt)
+            if result == SQLITE_ROW {
               let key = String(cString: sqlite3_column_text(stmt, 0))
               let record = String(cString: sqlite3_column_text(stmt, 1))
               rows.append(DatabaseRow(cacheKey: key, storedInfo: record))
-          } else if result != SQLITE_DONE {
+            } else if result != SQLITE_DONE {
               let errorMsg = String(cString: sqlite3_errmsg(db))
-              throw SQLiteError.step(message: "Failed to step raw row select: \(errorMsg)")
-          }
-      } while result != SQLITE_DONE
+              throw SQLiteError.step(message: "Failed to step raw row select: \(errorMsg)", resultCode: result)
+            }
+          } while result != SQLITE_DONE
 
+          return rows
+        }
 
-      return rows
-    }
+        allRows.append(contentsOf: rows)
+      }
+
+      return allRows
   }
 
   public func addOrUpdate(records: [(cacheKey: CacheKey, recordString: String)]) throws {
@@ -139,10 +151,11 @@ public final class ApolloSQLiteDatabase: SQLiteDatabase {
       for (key, record) in records {
         sqlite3_bind_text(stmt, 1, key, -1, SQLITE_TRANSIENT)
         sqlite3_bind_text(stmt, 2, record, -1, SQLITE_TRANSIENT)
-
-        if sqlite3_step(stmt) != SQLITE_DONE {
+        
+        let result = sqlite3_step(stmt)
+        if result != SQLITE_DONE {
           rollbackTransaction()
-          throw SQLiteError.step(message: "Insert/update failed: \(sqliteErrorMessage())")
+          throw SQLiteError.step(message: "Insert/update failed: \(sqliteErrorMessage())", resultCode: result)
         }
 
         sqlite3_reset(stmt)
@@ -165,8 +178,9 @@ public final class ApolloSQLiteDatabase: SQLiteDatabase {
       defer { sqlite3_finalize(stmt) }
 
       sqlite3_bind_text(stmt, 1, cacheKey, -1, SQLITE_TRANSIENT)
-      if sqlite3_step(stmt) != SQLITE_DONE {
-        throw SQLiteError.step(message: "Delete failed: \(sqliteErrorMessage())")
+      let result = sqlite3_step(stmt)
+      if result != SQLITE_DONE {
+        throw SQLiteError.step(message: "Delete failed: \(sqliteErrorMessage())", resultCode: result)
       }
     }
   }
@@ -181,8 +195,9 @@ public final class ApolloSQLiteDatabase: SQLiteDatabase {
       defer { sqlite3_finalize(stmt) }
 
       sqlite3_bind_text(stmt, 1, wildcardPattern, -1, SQLITE_TRANSIENT)
-      if sqlite3_step(stmt) != SQLITE_DONE {
-        throw SQLiteError.step(message: "Pattern delete failed: \(sqliteErrorMessage())")
+      let result = sqlite3_step(stmt)
+      if result != SQLITE_DONE {
+        throw SQLiteError.step(message: "Pattern delete failed: \(sqliteErrorMessage())", resultCode: result)
       }
     }
   }
@@ -202,3 +217,20 @@ public final class ApolloSQLiteDatabase: SQLiteDatabase {
     }
   }
 }
+
+// MARK: - Extensions
+
+extension Array {
+  func chunked(into size: Int) -> [[Element]] {
+    stride(from: 0, to: count, by: size).map {
+      Array(self[$0..<Swift.min($0 + size, count)])
+    }
+  }
+}
+
+extension Set {
+  func chunked(into size: Int) -> [[Element]] {
+    Array(self).chunked(into: size)
+  }
+}
+
