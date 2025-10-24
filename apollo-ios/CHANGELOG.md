@@ -1,5 +1,15 @@
 # Change Log
 
+## v1.25.2
+
+This version has no new changes since v1.25.1 and is being created to fix an issue where the previous version was tagged incorrectly.
+
+## v1.25.1
+
+### Fixed
+
+- **Fixed `SelectionSet` equality with `@include/@skip` fields ([#840](https://github.com/apollographql/apollo-ios-dev/pull/804)):** When a single field was used in a selection set with an `@include/@skip` directive, an `assertionFailure` would crash the program. This is now fixed.
+
 ## v1.25.0
 
 ### Fixed
