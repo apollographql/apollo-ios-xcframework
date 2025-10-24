@@ -3,19 +3,22 @@ name: "Release New Version"
 on:
   workflow_dispatch:
     inputs:
+      localRef:
+        description: 'Local branch to use'
+        required: true
       remoteRef:
-        description: 'Branch or Tag to Pull'
+        description: 'Remote branch or tag to pull'
         required: true
 
 jobs:
   create-release:
-    runs-on: macos-13
+    runs-on: macos-15
     name: Create Release
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v3
       with:
-        ref: main
+        ref: ${{ github.event.inputs.localRef }}
         fetch-depth: 0
     - name: Setup SSH Keys
       uses: webfactory/ssh-agent@v0.7.0
