@@ -1,6 +1,6 @@
 # 🔮 Apollo iOS Roadmap
 
-**Last updated: 2025-10-02**
+**Last updated: 2025-11-31**
 
 For up to date release notes, refer to the project's [Changelog](https://github.com/apollographql/apollo-ios/blob/main/CHANGELOG.md).
 
@@ -20,13 +20,19 @@ We are currently looking for feedback on what features, use cases, or improvemen
 
 Please see our [patch releases milestone](https://github.com/apollographql/apollo-ios/milestone/70) for more information about the fixes and enhancements we plan to ship in the near future.
 
-### [2.0 web socket support] - Swift 6 compatibility
+### 2.0 web socket support - Swift 6 compatibility
 
 The initial release of Apollo iOS 2.0 does not include support for web sockets. We are committed to implementing web sockets for 2.0 as soon as possible to return to feature parity with 1.0 in this regard.
 
-### [Support codegen of operations without response models](https://github.com/apollographql/apollo-ios/issues/3165)
+### Swift 6.2 Compatibility
 
 _Status: Not started_
+
+Ensure Apollo iOS 2.0 compiles properly with Swift 6.2. This includes supporting the Default Main Actor Isolation setting.
+
+### [Support codegen of operations without response models](https://github.com/apollographql/apollo-ios/issues/3165)
+
+_Status: API design in progress_
 
 - Support generating models that expose only the minimal necessary data for operation execution (networking and caching).
 - This would remove the generated response models, exposing response data as a simple `JSONObject` (ie. [String: AnyHashable]).
