@@ -135,6 +135,7 @@
 		F5ADA653309034533773017C /* FieldPolicyDirectiveEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05A96A6DED60B24F1C4F88 /* FieldPolicyDirectiveEvaluator.swift */; };
 		F7ABC8D2E07418DB51031310 /* MultipartResponseSpecificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7B9AF5BB56F3B94F7BA6D /* MultipartResponseSpecificationParser.swift */; };
 		FB966CEDE96CC142D60034FD /* HTTPURLResponse+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D67E6BE55997DF89D6B52AC /* HTTPURLResponse+Helpers.swift */; };
+		FD00E6F15D54A510388B8E98 /* ScalarType+DefaultMockValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763C7B8D209EA8541266386B /* ScalarType+DefaultMockValue.swift */; };
 		FD9B1B1CDDBFC8C52C3F8439 /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A3F90460E549B20B0DE92 /* EnumType.swift */; };
 		FF3A6F15F986A9D620B143D4 /* InputObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B46294DE77BA8A28E61CC5 /* InputObject.swift */; };
 /* End PBXBuildFile section */
@@ -284,6 +285,7 @@
 		71DB90458B615CDDAB1EE37F /* ResponseCodeInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodeInterceptor.swift; sourceTree = "<group>"; };
 		720604893C1507F94DA39932 /* ParentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentType.swift; sourceTree = "<group>"; };
 		7252EADEDAA3F0C39011F260 /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
+		763C7B8D209EA8541266386B /* ScalarType+DefaultMockValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScalarType+DefaultMockValue.swift"; sourceTree = "<group>"; };
 		76911004A762E9AFEC5FBA26 /* AutoPersistedQueryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoPersistedQueryConfiguration.swift; sourceTree = "<group>"; };
 		78850E10955CFF9EB1035009 /* FieldPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldPolicy.swift; sourceTree = "<group>"; };
 		8054CBE6AE6F0B8625ADF8DC /* SelectionSet+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionSet+Equatable.swift"; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				E4167A1E738F04946AB4E0D2 /* Field.swift */,
+				763C7B8D209EA8541266386B /* ScalarType+DefaultMockValue.swift */,
 				5EB28934002A9DC3ED08F7FE /* TestMock.swift */,
 				8DBFE504B9C9451E20C2AA60 /* TestMockSelectionSetMapper.swift */,
 			);
@@ -1090,6 +1093,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC942E1E6CC1DF6192AE2E4 /* Field.swift in Sources */,
+				FD00E6F15D54A510388B8E98 /* ScalarType+DefaultMockValue.swift in Sources */,
 				1D0170DD2F2480EB8A83C7B0 /* TestMock.swift in Sources */,
 				73E4DD225CB610C619226917 /* TestMockSelectionSetMapper.swift in Sources */,
 			);
