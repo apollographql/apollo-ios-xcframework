@@ -12,7 +12,6 @@
 		04D0870621C84F5D4C09C7DD /* CacheDataExecutionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76AE0323CFB0F276E3C46C /* CacheDataExecutionSource.swift */; };
 		06AAFD34304A08CFB7734911 /* SelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFCAE4118081BC607A398BE /* SelectionSet.swift */; };
 		07BD9F35732241CE8300AFA1 /* InterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49060BED276752D7EEAB2BF2 /* InterceptorProvider.swift */; };
-		08FCD5D252634CDD73E5CA75 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 45EB91510421EF554F923F9C /* SQLite */; };
 		09ACF3BA8D946C210A2B3B7E /* LocalCacheMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837750C9138A99E90C401A78 /* LocalCacheMutation.swift */; };
 		0EC5B0D5F9003C1DE29DACC9 /* ApolloAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FBF6994F1556E334627053 /* ApolloAPI.framework */; };
 		0F16148207316F9635594412 /* OutputTypeConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EE6DEADEE9E6E512C1F0A /* OutputTypeConvertible.swift */; };
@@ -407,7 +406,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA557F062B96E57307BECA0E /* Apollo.framework in Frameworks */,
-				08FCD5D252634CDD73E5CA75 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,7 +823,6 @@
 			);
 			name = ApolloSQLite;
 			packageProductDependencies = (
-				45EB91510421EF554F923F9C /* SQLite */,
 			);
 			productName = ApolloSQLite;
 			productReference = B17A3745FDBFE87985FCE6DB /* ApolloSQLite.framework */;
@@ -1701,13 +1698,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		45EB91510421EF554F923F9C /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SQLite;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62E30B6C8CC63265BB2204D9 /* Project object */;
 }
