@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -305,7 +305,7 @@
 		994D4E080C46549C5FE3EDF3 /* SingleResponseExecutionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleResponseExecutionHandler.swift; sourceTree = "<group>"; };
 		996A364969FD64F483142CB5 /* InMemoryNormalizedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryNormalizedCache.swift; sourceTree = "<group>"; };
 		99ED54FA6AF796AF7524E9F3 /* SelectionSet+DictionaryIntializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionSet+DictionaryIntializer.swift"; sourceTree = "<group>"; };
-		9AAC40A2C5228E6D2BBA82FD /* apollo-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "apollo-ios"; path = "apollo-ios"; sourceTree = "<group>"; };
+		9AAC40A2C5228E6D2BBA82FD /* apollo-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "apollo-ios"; sourceTree = "<group>"; };
 		9B77C96AE8C6E0D8E8EF91AC /* JSONRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRequest.swift; sourceTree = "<group>"; };
 		9BB088E3DB1B2334F6369FFF /* Optional+asNullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+asNullable.swift"; sourceTree = "<group>"; };
 		9C0F5B1A5956C3A081AC64CD /* SelectionSetModelExecutionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSetModelExecutionSource.swift; sourceTree = "<group>"; };
@@ -896,8 +896,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = apollographql;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = DCD12D47A973BE14168A5632 /* Build configuration list for PBXProject "Apollo" */;
 			compatibilityVersion = "Xcode 14.0";
