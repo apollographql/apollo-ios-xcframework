@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		06AAFD34304A08CFB7734911 /* SelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFCAE4118081BC607A398BE /* SelectionSet.swift */; };
 		07E98B89F2751A9727A63EC3 /* CacheWriteInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F4842E614E2771AC6BCA2 /* CacheWriteInterceptor.swift */; };
 		087F1F51DD256B32F2631E38 /* IncrementalJSONResponseParsingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D38F65CDFB03E4284403B /* IncrementalJSONResponseParsingInterceptor.swift */; };
-		08FCD5D252634CDD73E5CA75 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 45EB91510421EF554F923F9C /* SQLite */; };
 		090FD1B4C4EA90ABED20D211 /* JSONResponseParsingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F11B625C6CDF256C79905 /* JSONResponseParsingInterceptor.swift */; };
 		0915A36428F1BF7DC15C1CDD /* ResponseCodeInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB091A7C8FB2F96AF31EA1A9 /* ResponseCodeInterceptor.swift */; };
 		09ACF3BA8D946C210A2B3B7E /* LocalCacheMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837750C9138A99E90C401A78 /* LocalCacheMutation.swift */; };
@@ -317,7 +316,7 @@
 		98B04B81B62D282193DF69EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		98FBF6994F1556E334627053 /* ApolloAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApolloAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99ED54FA6AF796AF7524E9F3 /* SelectionSet+DictionaryIntializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionSet+DictionaryIntializer.swift"; sourceTree = "<group>"; };
-		9AAC40A2C5228E6D2BBA82FD /* apollo-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "apollo-ios"; path = "apollo-ios"; sourceTree = "<group>"; };
+		9AAC40A2C5228E6D2BBA82FD /* apollo-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "apollo-ios"; sourceTree = "<group>"; };
 		9B77C96AE8C6E0D8E8EF91AC /* JSONRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRequest.swift; sourceTree = "<group>"; };
 		A0A32EACC8E6A8825B733528 /* ApolloWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApolloWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A513E56242A87907ACF1EE /* IncrementalGraphQLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementalGraphQLResponse.swift; sourceTree = "<group>"; };
@@ -423,7 +422,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA557F062B96E57307BECA0E /* Apollo.framework in Frameworks */,
-				08FCD5D252634CDD73E5CA75 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,7 +799,6 @@
 			);
 			name = ApolloSQLite;
 			packageProductDependencies = (
-				45EB91510421EF554F923F9C /* SQLite */,
 			);
 			productName = ApolloSQLite;
 			productReference = B17A3745FDBFE87985FCE6DB /* ApolloSQLite.framework */;
@@ -872,8 +869,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				ORGANIZATIONNAME = apollographql;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = DCD12D47A973BE14168A5632 /* Build configuration list for PBXProject "Apollo" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -1657,13 +1652,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		45EB91510421EF554F923F9C /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SQLite;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62E30B6C8CC63265BB2204D9 /* Project object */;
 }
