@@ -20,6 +20,9 @@ jobs:
       with:
         ref: ${{ github.event.inputs.localRef }}
         fetch-depth: 0
+    - name: Verify make command
+      shell: bash
+      run: make
     - name: Setup SSH Keys
       uses: webfactory/ssh-agent@v0.7.0
       with:
