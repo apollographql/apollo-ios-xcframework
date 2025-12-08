@@ -12,7 +12,7 @@ on:
 
 jobs:
   create-release:
-    runs-on: macos-15
+    runs-on: macos-26
     name: Create Release
     steps:
     - name: Checkout Repo
