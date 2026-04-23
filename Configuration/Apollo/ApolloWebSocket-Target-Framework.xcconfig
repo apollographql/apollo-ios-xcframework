@@ -1,3 +1,4 @@
 #include "../Shared/Workspace-Universal-Framework.xcconfig"
 
 INFOPLIST_FILE = Sources/ApolloWebSocket/Info.plist
+SWIFT_PACKAGE_NAME = Apollo
